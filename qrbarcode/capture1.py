@@ -10,12 +10,6 @@ pathtime = "{0}y {1}m {2}d".format(x.year, x.month, x.day)
 
 os.makedirs(pathtime, exist_ok=True)
 f = open("{0}\{1}.txt".format(pathtime,pathtime), 'w')
-# 카메라 캡쳐 객체, 0=내장 카메라
-
-
-# 캡쳐 프레임 사이즈 조절
-# capture.set(cv2.CAP_PROP_FRAME_WIDTH, 320)
-# capture.set(cv2.CAP_PROP_FRAME_HEIGHT, 240)
 data_list = []
 used_codes = []
 try:
@@ -25,14 +19,13 @@ except FileNotFoundError:
     pass
 else:
     f.close()
-
+# 0=내장 카메라,1=외장 카메라
 capture = cv2.VideoCapture(0 + cv2.CAP_DSHOW)
 
 for i in data_list:
     used_codes.append(i.rsplit('\n'))
 
-while True: # 특정 키를 누를 때까지 무한 반복
-    # 한 프레임씩 읽기
+while True:
     success, frame = capture.read()
     now = str(datetime.now())
     cv2.putText(frame, now, (60, 70), cv2.FONT_HERSHEY_SCRIPT_SIMPLEX, 1, (0, 0, 255))
