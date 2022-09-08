@@ -8,7 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-public class 2dButtonArray {
+public class ButtonArray {
 
 static int iwidth;
 static int ilength;
