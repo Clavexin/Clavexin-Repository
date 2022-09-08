@@ -8,7 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-public class Kenshi_Main {
+public class 2dButtonArray {
 
 static int iwidth;
 static int ilength;
@@ -25,7 +25,7 @@ static JButton[][] t = new JButton[10][10];
 	}
 
 public static void window() {
-    JFrame window = new JFrame("Kenshi");
+    JFrame window = new JFrame("2D BUTTON ARRAY");
     window.setSize(700,100);
     window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     window.setLayout(new FlowLayout());
@@ -82,7 +82,7 @@ public static void cal() throws InterruptedException {
 }
 
 public static void print() throws InterruptedException {
-    JFrame print = new JFrame("Kenshi");
+    JFrame print = new JFrame("2D BUTTON ARRAY");
     print.setSize(1000,1100);
     print.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     print.setLayout(new GridLayout(2,1));
